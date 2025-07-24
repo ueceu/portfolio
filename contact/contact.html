@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul class="nav-left">
+      <li>
+        <a href="../index.html" aria-label="Home">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <ul class="nav-right">
+      <li><a href="../resume/resume.html">Resume</a></li>
+      <li><a href="../projects/projects.html">Projects</a></li>
+      <li><a href="../game/game.html">Game</a></li>
+      <li><a href="../contact/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Me</h2>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+      <a href="https://github.com/ueceu" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/ece-kuscu/" target="_blank"><i class="fab fa-linkedin"></i></a>
+       <a href="https://instagram.com/uecekuscu/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="contact-mail.html"><i class="fas fa-envelope"></i></a>
+
+    </div>
+
+
+<!-- Contact Form + Emojiler için sarıcı kutu -->
+<div class="form-with-flowers">
+
+    <!-- Köşe kiraz çiçekleri -->
+    <div class="corner top-left">
+    <div class="flower-pyramid">🌸<br>🌸 🌸</div>
+    </div>
+    <div class="corner top-right">
+    <div class="flower-pyramid">🌸<br>🌸 🌸</div>
+    </div>
+    <div class="corner bottom-left">
+    <div class="flower-pyramid">🌸 🌸<br>🌸</div>
+    </div>
+    <div class="corner bottom-right">
+    <div class="flower-pyramid">🌸 🌸<br>🌸</div>
+    </div>
+
+
+  <!-- Contact Form -->
+  <form class="contact-form" action="mailto:yourmail@example.com" method="POST" enctype="text/plain">
+    <input type="text" name="Name" placeholder="Your Name" required />
+    <input type="email" name="Email" placeholder="Your Email" required />
+    <textarea name="Message" rows="5" placeholder="Your Message..." required></textarea>
+    <button type="submit">Send</button>
+  </form>
+
+</div>
+
+  </section>
+
+  <!-- Howl Image -->
+  <img src="howl.png" alt="Howl" class="howl-img" />
+  
+
+</body>
+</html>

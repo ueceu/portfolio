@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="projects.css" />
+
+<!-- HEAD tag'inin içine, genellikle <title> etiketinden önce veya sonra -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+</head>
+<body>
+
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul class="nav-left">
+      <li>
+        <a href="../index.html" aria-label="Home">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <ul class="nav-right">
+      <li><a href="../resume/resume.html">Resume</a></li>
+      <li><a href="../projects/projects.html">Projects</a></li>
+      <li><a href="../game/game.html">Game</a></li>
+      <li><a href="../contact/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+<div class="banner">
+  <div class="slider" style="--quantity: 7">
+
+    <div class="item" style="--position: 1">
+      <model-viewer 
+        src="models/1.glb" 
+        auto-rotate 
+        disable-zoom 
+        disable-pan 
+        disable-tap 
+        interaction-prompt="none"
+        style="width: 200px; height: 200px; background: transparent;"
+        shadow-intensity="0"
+        camera-controls
+        environment-image="neutral"
+      ></model-viewer>
+    </div>
+
+    <div class="item" style="--position: 2">
+      <model-viewer 
+        src="models/2.glb" 
+        auto-rotate 
+        disable-zoom 
+        disable-pan 
+        disable-tap 
+        interaction-prompt="none"
+        style="width: 200px; height: 200px; background: transparent;"
+        shadow-intensity="0"
+        camera-controls
+        environment-image="neutral"
+      ></model-viewer>
+    </div>
+
+    <div class="item" style="--position: 3">
+      <model-viewer 
+        src="models/3.glb" 
+        auto-rotate 
+        disable-zoom 
+        disable-pan 
+        disable-tap 
+        interaction-prompt="none"
+        style="width: 200px; height: 200px; background: transparent;"
+        shadow-intensity="0"
+        camera-controls
+        environment-image="neutral"
+      ></model-viewer>
+    </div>
+
+    <div class="item" style="--position: 4">
+      <model-viewer 
+        src="models/4.glb" 
+        auto-rotate 
+        disable-zoom 
+        disable-pan 
+        disable-tap 
+        interaction-prompt="none"
+        style="width: 200px; height: 200px; background: transparent;"
+        shadow-intensity="0"
+        camera-controls
+        environment-image="neutral"
+      ></model-viewer>
+    </div>
+
+    <div class="item" style="--position: 5">
+      <model-viewer 
+        src="models/5.glb" 
+        auto-rotate 
+        disable-zoom 
+        disable-pan 
+        disable-tap 
+        interaction-prompt="none"
+        style="width: 200px; height: 200px; background: transparent;"
+        shadow-intensity="0"
+        camera-controls
+        environment-image="neutral"
+      ></model-viewer>
+    </div>
+
+
+    <div class="item" style="--position: 6">
+      <model-viewer 
+        src="models/6.glb" 
+        auto-rotate 
+        disable-zoom 
+        disable-pan 
+        disable-tap 
+        interaction-prompt="none"
+        style="width: 200px; height: 200px; background: transparent;"
+        shadow-intensity="0"
+        camera-controls
+        environment-image="neutral"
+      ></model-viewer>
+    </div>
+
+    <div class="item" style="--position: 7">
+      <model-viewer 
+        src="models/7.glb" 
+        auto-rotate 
+        disable-zoom 
+        disable-pan 
+        disable-tap 
+        interaction-prompt="none"
+        style="width: 200px; height: 200px; background: transparent;"
+        shadow-intensity="0"
+        camera-controls
+        environment-image="neutral"
+      ></model-viewer>
+    </div>
+
+
+  </div>
+
+</div>
+
+<div class="description">
+  <h2>About My Blender Creations</h2>
+  <p>
+    This is a collection of small 3D models I created using <strong>Blender</strong>. Each model was made as a standalone project, with a focus on learning sculpting, texturing, and giving personality to simple shapes.
+  </p>
+  <p>
+    These are designs that reflect my growing interest in 3D modeling and character creation. I hope they make you smile, just as I enjoyed bringing them to life.
+  </p>
+</div>
+
+
+
+<section class="project-slider-section">
+  <div class="project-slider">
+    <div class="project-item" style="--position:1;">
+      <img src="../projects/projectgrad/1.png" alt="Sıcaklık Kontrol Cihazı 1">
+    </div>
+    <div class="project-item" style="--position:2;">
+      <img src="../projects/projectgrad/2.png" alt="Sıcaklık Kontrol Cihazı 2">
+    </div>
+    <div class="project-item" style="--position:3;">
+      <img src="../projects/projectgrad/3.png" alt="Sıcaklık Kontrol Cihazı 3">
+    </div>
+    <div class="project-item" style="--position:4;">
+      <img src="../projects/projectgrad/4.png" alt="Sıcaklık Kontrol Cihazı 4">
+    </div>
+  </div>
+
+<div class="project-description">
+  <h2>Temperature Controller with On-Off & PID (Graduation Project)</h2>
+  <p>
+    Accurate temperature control is essential in modern industrial applications. This project implements a closed-loop system using three control strategies: PID, On/Off, and Slow PWM. Users can monitor real-time data, switch between control modes, and adjust parameters through an interactive interface — making the system ideal for both testing and educational purposes.
+  </p>
+  <p>
+    The system continuously reads temperature data and processes it in real time. Based on the selected control strategy, it dynamically adjusts the heating output. Users can set a target temperature, choose a control mode, and fine-tune relevant parameters through a user-friendly interface. Each control mode is designed to demonstrate how different algorithms respond under identical thermal conditions.
+  </p>
+</div>
+
+<div class="presentation-link">
+  For more details: 
+  <a href="https://1drv.ms/p/c/08a40d84823d5136/Eaztr6PV1HFEl8cAmPUNUKwBS8uCZO7_cRK9y-a1J5fcKA?e=xOHXPx" target="_blank">
+    Presentation
+  </a>
+</div>
+
+<div class="project-description">
+  <h2>My Animation Video</h2>
+  <video controls width="80%" style="border-radius: 15px; background: black;">
+    <source src="../video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <p>      This animation was created and rendered using Blender. It demonstrates my skills in 3D modeling and animation techniques.</p>
+</div>
+
+
+
+
+</body>
+</html>

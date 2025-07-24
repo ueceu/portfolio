@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ece's Portfolio</title>
+
+  <!-- Google Font: Pangolin -->
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+
+  <!-- Link to external CSS stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Import Google model-viewer Web Component -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <!-- Inline styles for model-viewer and content layering -->
+  <style>
+    model-viewer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1; /* Place behind main content */
+      width: 100vw;
+      height: 100vh;
+      background-color: transparent;
+    }
+
+    .main-content {
+      position: relative;
+      z-index: 1; /* Place main content above model-viewer */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Loading Screen shown before 3D model loads -->
+  <div id="loading-screen">
+    <div class="bubble-container">
+      <!-- Bubble animation images -->
+      <img src="bubbles/2.png" class="bubble bubble2" />
+      <img src="bubbles/3.png" class="bubble bubble3" />
+      <img src="bubbles/1.png" class="bubble bubble1" />
+    </div>
+    <div class="loader-text">Loading...</div>
+  </div>
+
+  <!-- Navigation bar with left and right menu -->
+  <nav>
+    <ul class="nav-left">
+      <li>
+        <a href="../index.html" aria-label="Home">
+          <!-- Home icon SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <ul class="nav-right">
+      <!-- Navigation links on the right -->
+      <li><a href="resume/resume.html">Resume</a></li>
+      <li><a href="projects/projects.html">Projects</a></li>
+      <li><a href="../game/game.html">Game</a></li>
+      <li><a href="../contact/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content area -->
+  <main class="main-content">
+    <div class="intro-text">
+      <div class="intro-row">
+        <span class="left-static">Ülkü Ece Kuşçu</span>
+        <div class="right-dynamic">
+          <!-- Rotating intro text -->
+          <span class="text show" id="text-1">Creative Developer & Engineer</span>
+          <span class="text" id="text-2">Welcome to my 3D portfolio!</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3D model viewer component -->
+    <model-viewer
+      src="models/TotoroWebWithoutAnimation.glb"
+      shadow-intensity="0"
+      disable-zoom
+      autoplay="false"
+      camera-controls
+      interaction-prompt="none"
+      disable-pan
+      exposure="1"
+      camera-orbit="90deg 90deg auto"
+      field-of-view="30deg">
+    </model-viewer>
+  </main>
+
+  <!-- JavaScript section -->
+<script>
+  // Text elements to cycle between
+  const texts = [
+    document.getElementById('text-1'),
+    document.getElementById('text-2')
+  ];
+  let current = 0;
+
+  // Function to toggle visibility of intro texts
+  function cycleTexts() {
+    texts[current].classList.remove('show');
+    current = (current + 1) % texts.length;
+    texts[current].classList.add('show');
+  }
+
+  // Cycle texts every 4 seconds
+  setInterval(cycleTexts, 4000);
+
+  // Hide loading screen when 3D model is fully loaded
+  const modelViewer = document.querySelector('model-viewer');
+  modelViewer.addEventListener('load', () => {
+    const loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.style.opacity = '0';
+    loadingScreen.style.pointerEvents = 'none';
+    loadingScreen.style.transition = 'opacity 0.5s ease';
+    setTimeout(() => loadingScreen.style.display = 'none', 500);
+  });
+</script>
+
+</body>
+</html>

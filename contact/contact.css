@@ -1,0 +1,192 @@
+/* Font and Background */
+body {
+  margin: 0; /* Removes page margin */
+  padding: 0; /* Removes page padding */
+  font-family: 'Pangolin', cursive; /* Font to be used throughout the page */
+  background: url('../wallpaper.png') no-repeat center center fixed; /* Background image, centered and fixed */
+  background-size: cover; /* Background covers the entire screen */
+  color: white; /* Sets text color to white */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Navigation Bar */
+nav {
+  display: flex; /* Arranges contents horizontally */
+  justify-content: space-between; /* Pushes left and right menus apart */
+  padding: 20px 35px; /* 20px top-bottom, 35px left-right padding */
+  background-color: transparent; /* Transparent background */
+  position: sticky; /* Sticks the nav bar during scrolling */
+  top: 0; /* Fixed at the very top of the page */
+  z-index: 2; /* Stays above other elements */
+}
+
+/* Left and Right menus */
+nav ul {
+  list-style: none; /* Removes list bullets */
+  display: flex; /* Aligns list items horizontally */
+  gap: 20px; /* 20px space between list items */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+}
+
+.nav-left {
+  justify-content: flex-start; /* Aligns menu items to the left */
+}
+
+.nav-right {
+  justify-content: flex-end; /* Aligns menu items to the right */
+}
+
+/* Menu links */
+nav ul li a {
+  text-decoration: none; /* Removes underline */
+  color: #ffffff; /* Text color white */
+  font-weight: 500; /* Medium font weight */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  text-decoration: underline; /* Underline on hover or when active */
+}
+
+nav ul.nav-right li a {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;       /* Less padding */
+  border-radius: 15px;     /* Slightly rounded corners */
+  font-size: 14px;         /* Font size reduced */
+  max-width: 120px;        /* Maximum width */
+  white-space: nowrap;     /* Prevent line wrapping */
+  overflow: hidden;        /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ... at the end of overflowing text */
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+nav ul.nav-right li a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+
+
+.contact-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.social-links {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 28px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #006eff;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #a4d61bbb;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Pangolin', cursive; /* buraya ekle */
+}
+
+
+.contact-form button:hover {
+  background-color: #4e8b24;
+}
+
+.howl-img {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 80%;  /* Mobil için büyük */
+  width: auto;
+  z-index: 0;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+@media (min-width: 1200px) {
+  .howl-img {
+    max-width: 40%; /* Masaüstü için daha küçük */
+  }
+}
+
+
+
+
+.form-with-flowers {
+  position: relative;
+  display: inline-block;
+}
+
+.corner {
+  position: absolute;
+  font-size: 16px;
+  line-height: 1.1;
+  white-space: pre;
+  pointer-events: none; /* Tıklanamaz hale getirir */
+}
+
+/* Her köşe için konum */
+.top-left {
+  top: -50px;
+  left: -25px;
+}
+.top-right {
+  top: -50px;
+  right: -25px;
+}
+.bottom-left {
+  bottom: -50px;
+  left: -25px;
+}
+.bottom-right {
+  bottom: -50px;
+  right: -25px;
+}
+
+.flower-pyramid {
+  text-align: center;
+  line-height: 1.2;
+}
+

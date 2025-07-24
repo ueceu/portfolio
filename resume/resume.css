@@ -1,0 +1,289 @@
+/* Font and Background */
+body {
+  margin: 0; /* Removes page margin */
+  padding: 0; /* Removes page padding */
+  font-family: 'Pangolin', cursive; /* Font to be used throughout the page */
+  background: url('../wallpaper.png') no-repeat center center fixed; /* Background image, centered and fixed */
+  background-size: cover; /* Background covers the entire screen */
+  color: white; /* Sets text color to white */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Navigation Bar */
+nav {
+  display: flex; /* Arranges contents horizontally */
+  justify-content: space-between; /* Pushes left and right menus apart */
+  padding: 20px 35px; /* 20px top-bottom, 35px left-right padding */
+  background-color: transparent; /* Transparent background */
+  position: sticky; /* Sticks the nav bar during scrolling */
+  top: 0; /* Fixed at the very top of the page */
+  z-index: 2; /* Stays above other elements */
+}
+
+/* Left and Right menus */
+nav ul {
+  list-style: none; /* Removes list bullets */
+  display: flex; /* Aligns list items horizontally */
+  gap: 20px; /* 20px space between list items */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+}
+
+.nav-left {
+  justify-content: flex-start; /* Aligns menu items to the left */
+}
+
+.nav-right {
+  justify-content: flex-end; /* Aligns menu items to the right */
+}
+
+/* Menu links */
+nav ul li a {
+  text-decoration: none; /* Removes underline */
+  color: #ffffff; /* Text color white */
+  font-weight: 500; /* Medium font weight */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  text-decoration: underline; /* Underline on hover or when active */
+}
+
+nav ul.nav-right li a {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;       /* Less padding */
+  border-radius: 15px;     /* Slightly rounded corners */
+  font-size: 14px;         /* Font size reduced */
+  max-width: 120px;        /* Maximum width */
+  white-space: nowrap;     /* Prevent line wrapping */
+  overflow: hidden;        /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ... at the end of overflowing text */
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+nav ul.nav-right li a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+
+.btn-pdf {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  color: white; /* Text color is white */
+  padding: 7px 18px; /* Padding: 7px top-bottom, 18px left-right */
+  border-radius: 15px; /* Rounded corners with 15px radius */
+  font-size: 16px; /* Font size of 16 pixels */
+  font-weight: 500; /* Medium font weight */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  border: none; /* No border */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+  max-width: 120px; /* Maximum width of 120 pixels */
+  white-space: nowrap; /* Prevent text from wrapping to next line */
+  overflow: hidden; /* Hide overflowed content */
+  text-overflow: ellipsis; /* Show ellipsis (...) if text is too long */
+  display: inline-block; /* Display as inline-block element */
+  text-align: center; /* Center-align text inside the button */
+  text-decoration: none; /* No underline or other text decoration */
+}
+
+.btn-pdf:hover {
+  background: rgba(255, 255, 255, 0.3); /* Slightly more opaque background on hover */
+  color: #fff; /* Text color remains white on hover */
+}
+
+
+
+
+
+
+/* Page Title */
+.page-title {
+  margin-top: 100px; /* 100px space from the top */
+  text-align: center; /* Center align */
+  font-size: 36px; /* Large title size */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Dark shadow */
+}
+
+
+/* Bubbles */
+.bubbles-container {
+  display: flex; /* Flexible box */
+  flex-direction: column; /* Vertical layout */
+  align-items: center; /* Center alignment */
+  gap: 30px; /* Space between items */
+  padding: 60px 20px 100px; /* Padding: 60 top, 20 sides, 100 bottom */
+}
+
+.bubble-row {
+  display: flex; /* Horizontal layout in a row */
+  align-items: center; /* Vertically center */
+  justify-content: space-between; /* Separate with space */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  margin-bottom: 40px; /* Space between rows */
+}
+
+.bubble {
+  position: relative; /* For positioning inner content */
+  width: 450px; /* Fixed width */
+  height: 300px; /* Fixed height */
+  flex-shrink: 0; /* Prevent shrinking */
+  box-sizing: border-box; /* Include padding and border in size */
+}
+
+.bubble img {
+  width: 100%; /* Image covers entire container */
+  height: 100%;
+  object-fit: contain; /* Image fits proportionally inside container */
+}
+
+.bubble-text {
+  position: absolute; /* To add text on top of image */
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center alignment */
+  color: white; /* Text color */
+  text-align: center; /* Centered text */
+  font-size: 20px;
+  font-weight: bold; /* Bold text */
+  width: 100%; /* Text width covers entire container */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Text shadow */
+}
+
+.bubble.left,
+.bubble.right {
+  width: 50%; /* 50% width */
+  max-width: 450px;
+  min-width: 250px; /* Prevent too narrow */
+}
+
+
+/* Text boxes */
+.left-text-container,
+.right-text-container {
+  width: 45%; /* Width */
+  min-width: 300px;
+  margin-top: 0;
+}
+
+/* Special margin for text lists */
+.left-text-container ul, .right-text-container ul {
+  margin: 20px 0 0 20px; /* Margin: 20 top, 0 right, 0 bottom, 20 left */
+  padding: 0; /* Reset default padding */
+}
+
+.left-text-container, .right-text-container {
+  margin-top: 70px; /* Top margin */
+}
+
+
+/* Special layout for large screens (right-left bubble arrangement) */
+@media (min-width: 876px) {
+  /* For screens wider than 876px, alternate the order of bubbles and text containers
+     to create a right-left staggered layout */
+  .bubble-row.even .bubble {
+    order: 2; /* Place bubble second in even rows */
+  }
+
+  .bubble-row.even .left-text-container,
+  .bubble-row.even .right-text-container {
+    order: 1; /* Place text containers first in even rows */
+  }
+
+  .bubble-row.odd .bubble {
+    order: 1; /* Place bubble first in odd rows */
+  }
+
+  .bubble-row.odd .left-text-container,
+  .bubble-row.odd .right-text-container {
+    order: 2; /* Place text containers second in odd rows */
+  }
+}
+
+/* Layout adjustments for smaller screens */
+@media (max-width: 875px) {
+  /* For screens smaller or equal to 875px, stack bubbles and texts vertically 
+     and center-align everything for better readability on mobile devices */
+  .bubble-row {
+    justify-content: center; /* Center content horizontally */
+  }
+
+  .bubble {
+    width: 90%; /* Make bubbles wider to fill most of the screen */
+    max-width: none; /* Remove max-width limit to allow flexible sizing */
+    top: -30px; /* Slightly shift bubbles upward */
+  }
+
+  .left-text-container,
+  .right-text-container {
+    width: 90%; /* Text containers take almost full width */
+    margin: 0 auto 30px; /* Center horizontally with bottom spacing */
+    text-align: center; /* Center text */
+    order: 0 !important; /* Reset order to default for stacked layout */
+  }
+
+  .bubble-row .bubble {
+    order: 0 !important; /* Reset bubble order */
+  }
+
+  .left-text-container ul,
+  .right-text-container ul {
+    list-style-position: inside; /* Place bullet points inside container */
+    padding-left: 0; /* Remove default left padding */
+    text-align: center; /* Center-align list text */
+  }
+}
+
+/* Medium-large screen padding adjustments */
+@media (min-width: 1000px) and (max-width: 1100px) {
+  /* For screen widths between 1000px and 1100px, add side padding to avoid content
+     sticking to the edges and improve overall appearance */
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .bubbles-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Apply similar side padding inside text containers */
+  .left-text-container,
+  .right-text-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Large screen padding increase */
+@media (min-width: 1100px) {
+  /* For screens wider than 1100px, increase side paddings to give more breathing space */
+  body {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .bubbles-container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+/* Extra large screens bubble size adjustment */
+@media (min-width: 1300px) {
+  /* For very large screens (1300px+), increase bubble sizes for better visual impact */
+  .bubble {
+    width: 600px;
+    height: 400px;
+    max-width: none;
+  }
+
+  .bubble.left,
+  .bubble.right {
+    width: 60%; /* Relative width for left and right aligned bubbles */
+    max-width: 600px;
+  }
+}
+
+

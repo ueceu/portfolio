@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cat Tower Builder</title>
+  <link rel="stylesheet" href="game.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul class="nav-left">
+      <li>
+        <a href="../index.html" aria-label="Home">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <ul class="nav-right">
+      <li><a href="../resume/resume.html">Resume</a></li>
+      <li><a href="../projects/projects.html">Projects</a></li>
+      <li><a href="../game/game.html">Game</a></li>
+      <li><a href="../contact/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Game Area -->
+<div class="game-container">
+  <div class="kitten-container" id="kittenContainer"></div>
+  <div class="tower" id="tower">
+    <img src="cat/zemin.png" class="ground" alt="ground" />
+  </div>
+</div>
+
+<!-- Oyun Butonu -->
+<button id="gameButton">Start Game</button>
+
+
+
+  <script src="game.js"></script>
+</body>
+</html>
