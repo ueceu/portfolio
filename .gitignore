@@ -3,3 +3,8 @@ game/cat/
 models/
 projects/models/
 video.mp4
+# .gitignore dosyana şunu ekle:
+*.blend
+*.fbx
+*.gltf
+*.obj
